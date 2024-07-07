@@ -7,7 +7,7 @@ interface IinputProps extends ComponentProps<'input'> {
 
 export const Input = ({ name, label, ...rest }: IinputProps) => {
     return (
-        <div>
+        <div className="btn-container">
             <label htmlFor={name}>{label}</label>
 
             <input {...rest} name={name}/>

@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import { Button } from '../../components/Button/index'
 import { Input } from '../../components/Inputs/index'
+import './style.css'
 
 export const Home = () => {
     const [numberUm, setNumberUm] = useState<string>('')
@@ -39,21 +40,23 @@ export const Home = () => {
     }
 
     return (
-        <div>
-            <div>
+        <div className='body-container'>
+            <div className='screen-container'>
                 <div>
-                    <Input label='Número um:' 
-                    name='numberUm' 
-                    onChange={handleChangedNumberUm}
-                    type='number'
-                    value={numberUm}/>
-                </div>
-                <div>
-                    <Input label='Número dois:' 
-                    name='numberDois' 
-                    onChange={handleChangedNumberDois}
-                    type='number'
-                    value={numberDois}/>
+                    <div className='input-container'>
+                        <Input label='Número um:' 
+                        name='numberUm' 
+                        onChange={handleChangedNumberUm}
+                        type='number'
+                        value={numberUm}/>
+                    </div>
+                    <div className='input-container'>
+                        <Input label='Número dois:' 
+                        name='numberDois' 
+                        onChange={handleChangedNumberDois}
+                        type='number'
+                        value={numberDois}/>
+                    </div>
                 </div>
 
                 <div>
@@ -65,18 +68,21 @@ export const Home = () => {
 
             <span>Executar operação:</span>
 
-           <Button onClick={handleAddition}>
-                Adição
-           </Button>
-           <Button onClick={handleSubtraction}>
-                Subtração
-           </Button>
-           <Button onClick={handleMultiplication}>
-                Multiplicação
-           </Button>
-           <Button onClick={handleDivision}>
-                Divisão
-           </Button>
+            <div className='btn-concatiner'>
+                <Button onClick={handleAddition}>
+                    Adição
+                </Button>
+                <Button onClick={handleSubtraction}>
+                    Subtração
+                </Button>
+                <Button onClick={handleMultiplication}>
+                    Multiplicação
+                </Button>
+                <Button onClick={handleDivision}>
+                    Divisão
+                </Button>
+            </div>
+
         </div>
     )
 };
