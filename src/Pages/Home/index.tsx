@@ -42,7 +42,7 @@ export const Home = () => {
     return (
         <div className='body-container'>
             <div className='screen-container'>
-                <div>
+                <div className='input'>
                     <div className='input-container'>
                         <Input label='Número um:' 
                         name='numberUm' 
@@ -59,7 +59,7 @@ export const Home = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='result'>
                     <p>Resultado</p>
                     <span>{result}</span>
                 </div>

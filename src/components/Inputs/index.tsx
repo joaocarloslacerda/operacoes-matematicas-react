@@ -1,4 +1,5 @@
 import { ComponentProps } from "react";
+import './style.css'
 
 interface IinputProps extends ComponentProps<'input'> {
     label: string;
@@ -7,10 +8,10 @@ interface IinputProps extends ComponentProps<'input'> {
 
 export const Input = ({ name, label, ...rest }: IinputProps) => {
     return (
-        <div className="btn-container">
+        <div className="field-input">
             <label htmlFor={name}>{label}</label>
 
-            <input {...rest} name={name}/>
+            <input className="field" {...rest} name={name}/>
         </div>   
     );
 };

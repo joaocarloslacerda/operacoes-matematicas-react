@@ -1,0 +1,9 @@
+.btn-operation{
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(50, 50, 247);
+    color: white;
+    border: 5px solid rgb(50, 50, 247);
+    border-radius: 5px;
+}

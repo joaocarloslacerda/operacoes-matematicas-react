@@ -10,16 +10,31 @@ body{
     border: 3px solid rgb(197, 197, 197);
     border-radius: 10px;
     padding: 10px;
+    gap: 15px;
+    
 }
 .screen-container{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    /* gap: 20px; */
 }
-.input-container{
+.input{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.result{
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    gap: 25px;
+}
+.result > span{
+    font-size: 35px;
 }
 .btn-concatiner{
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
